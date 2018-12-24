@@ -8,15 +8,26 @@
 
 #import "BaseControlVC.h"
 
-@interface BaseControlVC ()
-
-@end
+#import "LayerVC.h"
+#import "ViewVC.h"
+#import "TableViewVC.h"
+#import "CollectionViewVC.h"
 
 @implementation BaseControlVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setUp];
+}
+
+#pragma mark - Set Up
+- (void)setUp{
+    
+    self.items = @[[BaseListViewItem listItemWithTitle:@"图层" controllerName:@"LayerVC"],
+                   [BaseListViewItem listItemWithTitle:@"视图" controllerName:@"ViewVC"],
+                   [BaseListViewItem listItemWithTitle:@"TableView" controllerName:@"TableViewVC"],
+                   [BaseListViewItem listItemWithTitle:@"CollectionView" controllerName:@"CollectionViewVC"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

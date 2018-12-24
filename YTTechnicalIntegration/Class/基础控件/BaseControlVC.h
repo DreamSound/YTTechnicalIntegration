@@ -6,8 +6,8 @@
 //  Copyright © 2018年 hiteam. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseListViewController.h"
 
-@interface BaseControlVC : UIViewController
+@interface BaseControlVC : BaseListViewController
 
 @end
